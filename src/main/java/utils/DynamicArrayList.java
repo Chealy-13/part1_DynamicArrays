@@ -52,5 +52,40 @@ public class DynamicArrayList {
         return true;
     }
 
+    //      AN EXTRA CONSTRUCTOR
+//Your dynamic array list should include a constructor that lets the user specify by how much the list
+// should expand each time it runs out of space in its internal array. The constructor should take in
+// one parameter, an int that specifies the expansion factor to be used.
+// The supplied value should be validated, and invalid values handled accordingly.
+    public DynamicArrayList(int size) {
+        data = new String[size];
+    }
+
+//      AN EXTRA ADD
+//    Your list should contain a method called add() that takes two parameters:
+//    A String to be added (this may be null).
+//    A position at which to insert the data.
+
+//    The position should be validated and invalid positions handling accordingly. If the position is valid,
+//    the data from that position should be added to the list using shift insertion.
+//    If there is insufficient space in the list, the internal array should be
+//    grown (using the arraycopy method from Java’s API OR your own growArray algorithm) and
+//    the String added then. If supplied, null values should be added.
+//    The method should return nothing.
+
+
+//      A REMOVE
+//Your list should contain a method called remove() that takes two parameters:
+//    The String to be removed (This should not be null).
+//    An int indicating the position from which to start the removal process.
+//    The first instance of this String found starting at the specified position should be
+//    removed from the list. The method should return a boolean indicating if an instance
+//    of the String was removed.
+
+
+//    A RANDOM OTHER FEATURE
+//Your list should contain a method called clear() that takes no parameters and returns nothing.
+// This method should wipe the content of the array and reset it back to the initial size.
+
 
 }
