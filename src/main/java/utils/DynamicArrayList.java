@@ -37,11 +37,20 @@ public class DynamicArrayList {
         return -1;
     }
 
-//A method called add() that takes a single parameter, a String to be added. This String should be added to the
+    //A method called add() that takes a single parameter, a String to be added. This String should be added to the
 //end of the list. If there is insufficient space in the list, the internal array should be grown, and the String added
 //then. Null values should be allowed. The method should return a boolean indicating if the String was added.
-
-
+    public boolean add(String stringToBeAdded) {
+        if (numOfElements == data.length) {
+            // If the array is full, double its capacity
+            String[] newData = new String[data.length * 2];
+            System.arraycopy(data, 0, newData, 0, data.length);
+            data = newData;
+        }
+        data[numOfElements] = stringToBeAdded;
+        numOfElements++;
+        return true;
+    }
 
 
 }
