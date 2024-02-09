@@ -59,7 +59,7 @@ public class DynamicArrayList {
      */
     public int indexOf(String stringToFind) {
         for (int i = 0; i < data.length; i++) {
-            if (stringToFind == data[i]) {
+            if (stringToFind.equals(data[i])) {
                 return i;
             }
         }
