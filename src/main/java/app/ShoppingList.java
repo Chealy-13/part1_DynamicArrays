@@ -31,14 +31,34 @@ public class ShoppingList {
 
 //        5. Repeatedly offers a menu of actions that can be done by the shopping list (based on the functionality you have
 //        been tasked with) and provides the logic for each.
-        boolean exit = false;
-        while (!exit) {
+        boolean quit = false;
+        while (!quit) {
             System.out.println("\nMenu");
             System.out.println("1. Add an item to your list");
-            System.out.println("5. Quit");
+            System.out.println("2. Quit");
             System.out.println("Choose an option");
             int choice = sc.nextInt();
             sc.nextLine();
+
+            switch (choice){
+                case 1:
+                    System.out.print("Enter the item to add: ");
+                    String newItem = sc.nextLine();
+                    myList.add(newItem);
+                    System.out.println("My Shopping List:");
+                    for (int i = 0; i < myList.size(); i++) {
+                        System.out.println((i + 1) + ". " + myList.get(i));
+                    }
+                    break;
+
+                case 2:
+                    quit = true;
+                    break;
+
+                default:
+                    System.out.println("Invalid choice please try again");
+            }
         }
+        sc.close();
     }
 }
